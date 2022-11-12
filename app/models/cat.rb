@@ -13,7 +13,6 @@ class Cat < ApplicationRecord
         "M"
     ]
 
-    #
     validates :birth_date, :color, :name, :sex, presence: true
     validates :color, inclusion: {in: CAT_COLORS}
     validates :sex, inclusion: {in: GENDER}

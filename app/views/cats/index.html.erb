@@ -6,6 +6,7 @@
     <td>sex</td>
     <td>birth_date</td>
     <td>description</td>
+    <td>inspect</td>
 </th>
 <% @cats.each do |cat| %>
     <tr>
@@ -15,6 +16,9 @@
         <td><%= cat.sex %></td>
         <td><%= cat.birth_date %></td>
         <td><%= cat.description %></td>
+        <td><a href="<%= cat_url(cat.id) %>">Inspect</a></td>
     </tr>
 <% end %>
 </table>
+<br>
+<a href="<%= new_cat_url %>">New Cat</a>
